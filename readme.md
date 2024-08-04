@@ -1,6 +1,14 @@
 # factorio-server-builder
 
-This collection of scripts can build, sync, and start a vanilla or modded headless Factorio server nearly from scratch.
+This collection of scripts can build, sync, and start a vanilla or modded headless Factorio server for Linux nearly from scratch.
+
+## build and sync dependencies
+
+1. zsh for evaluating build start and sync scripts
+1. node for baking discord token environment variable into factocord config
+1. curl for downloading headless factorio server and factocord
+1. tar for unpacking factorio server
+1. rsync for syncing build to remote server
 
 ## prerequisites
 
@@ -22,7 +30,7 @@ The build script will create a template secrets file `./secrets.zsh` with empty 
 1. enable Bot > Privileged Gateway Intents > Server Members Intent
 1. copy Installation > Install Link to the browser url bar
 1. add the bot to selected discord server
-1. copy the token from `Bot > Reset Token` to `./secrets.zsh`
+1. copy Bot > Reset Token to `./secrets.zsh`
 
 ## build
 
