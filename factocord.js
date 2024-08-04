@@ -5,7 +5,7 @@ console.log(JSON.stringify({
     "--start-server-load-latest",
     "saves/default.zip",
     "--server-settings",
-    "data/server-settings.example.json",
+    "data/server-settings.json",
   ],
   // start factorio when factocord starts
   autolaunch: true,

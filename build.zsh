@@ -29,6 +29,7 @@ else
 
   cp -r factorio-template server
   cp -r mods/ server/mods/
+  cp server-settings.json server/data/
 
   mkdir server/saves
   server/bin/x64/factorio --create server/saves/default.zip
