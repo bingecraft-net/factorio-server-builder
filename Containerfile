@@ -19,4 +19,4 @@ RUN ln -s /home/factorio/.local/share/factorio/bin/x64/factorio .local/bin
 COPY server-settings.json .local/share/factorio/data
 
 CMD if [ ! -f .local/share/factorio/saves/default.zip ] ; then factorio --create .local/share/factorio/saves/default.zip --server-settings .local/share/factorio/data/server-settings.json ; fi && \
-    factorio --start-server-load-latest .local/share/factorio/saves/default.zip --server-settings .local/share/factorio/data/server-settings.json
+    exec factorio --start-server-load-latest .local/share/factorio/saves/default.zip --server-settings .local/share/factorio/data/server-settings.json
