@@ -1,0 +1,10 @@
+#!/usr/bin/zsh
+
+if [ -f cidfile ] ; then
+  podman stop $(cat cidfile)
+else
+  echo error: no cidfile
+  exit 1
+fi
+
+podman logs $(cat cidfile)
