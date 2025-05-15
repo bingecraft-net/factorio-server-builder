@@ -1,0 +1,12 @@
+#!/usr/bin/zsh
+
+if [ -f cidfile ] ; then
+  podman start $(cat cidfile)
+else
+  IMAGE_TAG=factorio
+
+  podman build -t $IMAGE_TAG .
+  podman run -p 34197:34197/udp -dit $IMAGE_TAG > cidfile
+fi
+
+podman logs $(cat cidfile)
